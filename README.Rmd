@@ -118,11 +118,11 @@ library(waterpointfunctionality)
 
 ### metadata
 
-The dataset `metadata` contains `r nrow(metadata)`
-observations and `r ncol(metadata)` variables
+The dataset `waterpointfunctionality` contains `r nrow(waterpointfunctionality)`
+observations and `r ncol(waterpointfunctionality)` variables
 
 ```{r}
-metadata |> 
+waterpointfunctionality |> 
   head(3) |> 
   gt::gt() |>
   gt::as_raw_html()
