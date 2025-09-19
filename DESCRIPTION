@@ -1,9 +1,9 @@
 Package: waterpointfunctionality
-Title: What the Package Does (One Line, Title Case)
+Title: Water Point Functionality - Malawi, 2022
 Version: 0.0.0.9000
 Authors@R: 
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: This dataset contains survey records on the functionality and management of rural water points in Malawi. The information was gathered by enumerators using the mWater application with support from BASEflow in 2022. The primary purpose of this data collection was to assess the operational status of water points, identify technical and water quality problems, evaluate seasonal reliability, and document community management structures in order to inform maintenance planning, strengthen water governance, and improve access to safe and sustainable water supply.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
