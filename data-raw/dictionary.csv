@@ -1,17 +1,17 @@
-directory,file_name,variable_name,variable_type,description,,,,,
-data/,waterpointfunctionality.rda,submitted_on,character,Date and time when the survey response was submitted,,,,,
-data/,waterpointfunctionality.rda,waterpoint_photo,character,Link or file path to the photo of the water point,,,,,
-data/,waterpointfunctionality.rda,latitude,numeric,Latitude coordinate of the water point location,,,,,
-data/,waterpointfunctionality.rda,longitude,numeric,Longitude coordinate of the water point location,,,,,
-data/,waterpointfunctionality.rda,functional_status,character,Operational status of the water point (eg  functional  partially functional  broken),,,,,
-data/,waterpointfunctionality.rda,current_problem,character,Main problem affecting the water point,,,,,
-data/,waterpointfunctionality.rda,other_current_problem,character,Any additional problems not listed in current problem,,,,,
-data/,waterpointfunctionality.rda,water_quality_problems_available,character,Indicates if there are water quality issues observed at this water point,,,,,
-data/,waterpointfunctionality.rda,available_water_quality_issues,character,Specific water quality problems observed (eg  turbidity  contamination),,,,,
-data/,waterpointfunctionality.rda,other_water_quality_issues,character,Any other water quality issues not listed in available water quality issues,,,,,
-data/,waterpointfunctionality.rda,households_using_waterpoint,numeric,Approximate number of households regularly using this water point,,,,,
-data/,waterpointfunctionality.rda,water_unavailable_seasonally,character,Indicates whether water supply is affected by seasonal variation,,,,,
-data/,waterpointfunctionality.rda,water_unavailable_period,character,Periods of the year when water is not available,,,,,
-data/,waterpointfunctionality.rda,service_provider_available,character,Indicates if there is a responsible person or organization maintaining the water point,,,,,
-data/,waterpointfunctionality.rda,type_of_provider,character,Type of service provider (eg  government  private  community based),,,,,
-data/,waterpointfunctionality.rda,waterpoint_committee_active,character,Indicates whether the water point has an active Water Point Committee managing it,,,,,
+directory,file_name,variable_name,variable_type,description
+data/,waterpointfunctionality.rda,submitted_on,character,Date and time when the survey response was submitted
+data/,waterpointfunctionality.rda,waterpoint_photo,character,Link or file path to the photo of the water point
+data/,waterpointfunctionality.rda,latitude,numeric,Latitude coordinate of the water point location
+data/,waterpointfunctionality.rda,longitude,numeric,Longitude coordinate of the water point location
+data/,waterpointfunctionality.rda,functional_status,character,Operational status of the water point (eg  functional  partially functional  broken)
+data/,waterpointfunctionality.rda,current_problem,character,Main problem affecting the water point
+data/,waterpointfunctionality.rda,other_current_problem,character,Any additional problems not listed in current problem
+data/,waterpointfunctionality.rda,water_quality_problems_available,character,Indicates if there are water quality issues observed at this water point
+data/,waterpointfunctionality.rda,available_water_quality_issues,character,Specific water quality problems observed (eg  turbidity  contamination)
+data/,waterpointfunctionality.rda,other_water_quality_issues,character,Any other water quality issues not listed in available water quality issues
+data/,waterpointfunctionality.rda,households_using_waterpoint,numeric,Approximate number of households regularly using this water point
+data/,waterpointfunctionality.rda,water_unavailable_seasonally,character,Indicates whether water supply is affected by seasonal variation
+data/,waterpointfunctionality.rda,water_unavailable_period,character,Periods of the year when water is not available
+data/,waterpointfunctionality.rda,service_provider_available,character,Indicates if there is a responsible person or organization maintaining the water point
+data/,waterpointfunctionality.rda,type_of_provider,character,Type of service provider (eg  government  private  community based)
+data/,waterpointfunctionality.rda,waterpoint_committee_active,character,Indicates whether the water point has an active Water Point Committee managing it

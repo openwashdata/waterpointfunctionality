@@ -95,7 +95,7 @@ waterpointfunctionality |>
   gt::as_raw_html()
 ```
 
-<div id="hhkqaoakuz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="iyahqovnpb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -206,17 +206,17 @@ description
 
 <td style="text-align:left;">
 
-NA
+submitted_on
 </td>
 
 <td style="text-align:left;">
 
-NA
+character
 </td>
 
 <td style="text-align:left;">
 
-NA
+Date and time when the survey response was submitted
 </td>
 
 </tr>
@@ -225,17 +225,287 @@ NA
 
 <td style="text-align:left;">
 
-:————-
+waterpoint_photo
 </td>
 
 <td style="text-align:left;">
 
-:————-
+character
 </td>
 
 <td style="text-align:left;">
 
-:———–
+Link or file path to the photo of the water point
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+latitude
+</td>
+
+<td style="text-align:left;">
+
+numeric
+</td>
+
+<td style="text-align:left;">
+
+Latitude coordinate of the water point location
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+longitude
+</td>
+
+<td style="text-align:left;">
+
+numeric
+</td>
+
+<td style="text-align:left;">
+
+Longitude coordinate of the water point location
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+functional_status
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Operational status of the water point (eg functional partially
+functional broken)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+current_problem
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Main problem affecting the water point
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+other_current_problem
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Any additional problems not listed in current problem
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+water_quality_problems_available
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Indicates if there are water quality issues observed at this water point
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+available_water_quality_issues
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Specific water quality problems observed (eg turbidity contamination)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+other_water_quality_issues
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Any other water quality issues not listed in available water quality
+issues
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+households_using_waterpoint
+</td>
+
+<td style="text-align:left;">
+
+numeric
+</td>
+
+<td style="text-align:left;">
+
+Approximate number of households regularly using this water point
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+water_unavailable_seasonally
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Indicates whether water supply is affected by seasonal variation
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+water_unavailable_period
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Periods of the year when water is not available
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+service_provider_available
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Indicates if there is a responsible person or organization maintaining
+the water point
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+type_of_provider
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Type of service provider (eg government private community based)
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+waterpoint_committee_active
+</td>
+
+<td style="text-align:left;">
+
+character
+</td>
+
+<td style="text-align:left;">
+
+Indicates whether the water point has an active Water Point Committee
+managing it
 </td>
 
 </tr>
