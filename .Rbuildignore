@@ -2,5 +2,5 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^LICENSE\.md$
-^data/metadata$
 ^README\.Rmd$
+^data/metadata$
