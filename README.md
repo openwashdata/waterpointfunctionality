@@ -8,6 +8,7 @@
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+[![DOI](https://zenodo.org/badge/1060133703.svg)](https://doi.org/10.5281/zenodo.17433321)
 <!-- badges: end -->
 
 This dataset contains survey records on the functionality and management
