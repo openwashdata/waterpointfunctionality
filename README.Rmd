@@ -1,0 +1,205 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# Water Point Functionality - Malawi, 2022
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+This dataset contains survey records on the functionality and management
+of rural water points in Malawi. The information was gathered by
+enumerators using the mWater application with support from BASEflow on 6
+April 2022. The primary purpose of this data collection was to assess
+the operational status of water points, identify technical and water
+quality problems, evaluate seasonal reliability, and document community
+management structures in order to inform maintenance planning,
+strengthen water governance, and improve access to safe and sustainable
+water supply.
+
+Potential use cases of this dataset include:
+
+1.  **Local governments and water authorities**
+    To plan maintenance, target investments, and monitor water service
+    delivery.
+
+2.  **NGOs and development partners**
+    To identify priority interventions, support vulnerable communities,
+    and evaluate the effectiveness of water governance models.
+
+3.  **Community water committees and service providers**
+    To strengthen accountability, improve routine monitoring, and
+    support timely repairs.
+
+4.  **Researchers and academics**
+    To study rural water service sustainability, water point
+    performance, and governance dynamics.
+
+5.  **Donors and policy makers**
+    To track progress toward SDG 6 (clean water and sanitation) and
+    inform evidence-based decision making.
+
+## Installation
+
+You can install the development version of waterpointfunctionality from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/waterpointfunctionality")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/waterpointfunctionality/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to survey records on the functionality and management of rural water points in Malawi. The information was gathered by enumerators using the mWater application with support from BASEflow in 2022.
+
+```{r}
+library(waterpointfunctionality)
+```
+
+### metadata
+
+The dataset `waterpointfunctionality` contains `r nrow(waterpointfunctionality)`
+observations and `r ncol(waterpointfunctionality)` variables
+
+```{r}
+waterpointfunctionality |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "waterpointfunctionality.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Example Visualizations of the data
+
+```{r}
+library(waterpointfunctionality)
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+# 1. Bar chart of functionality status
+# Purpose: shows the functionality status of the waterpoints 
+
+# Count occurrences of each functionality status
+func_count <- waterpointfunctionality %>%
+  count(functional_status)
+
+# Bar chart
+ggplot(func_count, aes(x = functional_status, y = n, fill = functional_status)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Water Point Functionality Status",
+       x = "Functionality Status",
+       y = "Count") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+# 2. Bar chart of common problems
+# Purpose: Shows frequency of common problems with the waterpoints
+
+problems_long <- waterpointfunctionality %>%
+  separate_rows(current_problem, sep = ",\\s*") %>%
+  filter(!is.na(current_problem) & current_problem != "NA") %>%
+  # Remove "Other", "etc", etc.
+  filter(!tolower(current_problem) %in% c("other", "etc", "other (please specify)"))
+
+# Count frequency of each problem
+problem_count <- problems_long %>%
+  count(current_problem) %>%
+  arrange(desc(n))
+
+# Plot Bar chart
+ggplot(problem_count, aes(x = reorder(current_problem, n), y = n, fill = current_problem)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Common Problems at Water Points",
+       x = "Problem Type",
+       y = "Count") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("waterpointfunctionality")
+```

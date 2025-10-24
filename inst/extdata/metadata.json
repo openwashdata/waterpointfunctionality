@@ -1,0 +1,36 @@
+{
+  "@context": "https://openwashdata.org/",
+  "@type": "Dataset",
+  "name": "waterpointfunctionality",
+  "description": "This dataset contains survey records on the functionality and management of rural water points in Malawi. The information was gathered by enumerators using the mWater application with support from BASEflow in 2022. The primary purpose of this data collection was to assess the operational status of water points, identify technical and water quality problems, evaluate seasonal reliability, and document community management structures in order to inform maintenance planning, strengthen water governance, and improve access to safe and sustainable water supply.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "openwashdata @ Global Health Engineering, ETH Zurich",
+    "url": "https://openwashdata.org/"
+  },
+  "datePublished": "2025-09-19",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": "waterpoints, boreholes,water quality,water management,rural waterpoins",
+  "distribution": {
+    "@type": "DataDownload",
+    "url": "https://raw.githubusercontent.com/openwashdata/waterpointfunctionality/main/inst/extdata/waterpointfunctionality.csv",
+    "contentUrl": "https://raw.githubusercontent.com/openwashdata/waterpointfunctionality/main/inst/extdata/waterpointfunctionality.csv",
+    "encodingFormat": "text/csv"
+  },
+  "encodingFormat": "CSV",
+  "version": "1.0",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Malawi"
+  },
+  "temporalCoverage": {
+    "@type": "DateTime",
+    "startDate": null,
+    "endDate": null
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Emmanuel Mhango",
+    "email": "emmanuellmhango@gmail.com"
+  }
+}

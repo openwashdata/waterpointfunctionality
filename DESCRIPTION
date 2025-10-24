@@ -1,11 +1,41 @@
 Package: waterpointfunctionality
-Title: What the Package Does (One Line, Title Case)
+Title: Water Point Functionality - Malawi, 2022
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R: c(
+    person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3197-6244")),
+    person("Isaac", "Chirwa", role = "ctb"),
+    person("Stella", "Kamtsokwe", role = "ctb"),
+    person("Kennedy", "Buleya", role = "ctb"),
+    person("Dan", "Kaiwe", role = "ctb"),
+    person("Zione", "Mthawira", role = "ctb"),
+    person("Charles", "Muleya", role = "ctb"),
+    person("Samuel", "Chowe", role = "ctb"),
+    person("Mwai", "Nkomaula", role = "ctb"),
+    person("Kenneth", "Mangazi", role = "ctb"),
+    person("Malachi", "Phiri", role = "ctb"),
+    person("Edward", "Mbwana", role = "ctb"),
+    person("Kevin", "Chipofya", role = "ctb"),
+    person("Louis", "Masanje", role = "ctb"),
+    person("Tisunge", "Kamoto", role = "ctb"),
+    person("Ellias", "Kankhande", role = "ctb"),
+    person("Esther", "Jiya", role = "ctb"),
+    person("Charity", "Chiwalo", role = "ctb"),
+    person("Brighton", "Kananji", role = "ctb"),
+    person("Agness", "Ngoma", role = "ctb"),
+    person("Eunice", "Magria", role = "ctb"),
+    person("Giston", "Haswell", role = "ctb")
+  )
+Description: This dataset contains survey records on the functionality and management of rural water points in Malawi. The information was gathered by enumerators using the mWater application with support from BASEflow in 2022. The primary purpose of this data collection was to assess the operational status of water points, identify technical and water quality problems, evaluate seasonal reliability, and document community management structures in order to inform maintenance planning, strengthen water governance, and improve access to safe and sustainable water supply.
+License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Language: en-GB
+Config/Needs/website: rmarkdown
+Date: 2025-09-19
+URL: https://github.com/openwashdata/waterpointfunctionality
+BugReports: https://github.com/openwashdata/waterpointfunctionality/issues

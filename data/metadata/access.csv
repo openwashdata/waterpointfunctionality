@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+waterpointfunctionality.csv,waterpointfunctionality,https://raw.githubusercontent.com/openwashdata/waterpointfunctionality/main/inst/extdata/waterpointfunctionality.csv,csv
+waterpointfunctionality.xlsx,waterpointfunctionality,https://raw.githubusercontent.com/openwashdata/waterpointfunctionality/main/inst/extdata/waterpointfunctionality.xlsx,ooxml
